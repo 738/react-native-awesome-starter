@@ -20,6 +20,7 @@
     "metro-react-native-babel-preset": "0.45.3",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "16.5.0",
+    "styled-components": "^3.4.9",
     "ts-jest": "^23.1.4",
     "typescript": "^3.0.3"
   },
