@@ -54,6 +54,85 @@ module.exports = {
 
 in order to migrate to typescript, rename `App.js` to `App.tsx`
 
+add typescript test infra
+```bash
+yarn add --dev ts-jest
+```
+
+write this in `package.json`
+```json
+"jest": {
+  "preset": "react-native",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js"
+  ],
+  "transform": {
+    "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+    "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  },
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "testPathIgnorePatterns": [
+    "\\.snap$",
+    "<rootDir>/node_modules/"
+  ],
+  "cacheDirectory": ".jest/cache"
+}
+```
+
+3. use `styled-components` (ts)
+
+```bash
+yarn add --dev styled-components
+```
+
+make `index.ts` file in theme directory
+```typescript
+import * as styledComponents from "styled-components";
+
+const {
+  default: styled,
+  css,
+  injectGlobal,
+  keyframes,
+  ThemeProvider
+} = styledComponents as styledComponents.ThemedStyledComponentsModule<
+  IThemeInterface
+>;
+
+export interface IThemeInterface {
+  primaryColor: string;
+}
+
+export const theme = {
+  primaryColor: "#e9e9eb"
+};
+
+export default styled;
+export { css, injectGlobal, keyframes, ThemeProvider };
+```
+
+migrate `css` to `styled-components`
+```tsx
+// in App.tsx
+const ContainerView = styled(View)`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5FCFF;
+`;
+
+class App extends Component {
+  render() {
+    return (
+      <ContainerView>
+        // ...
+      </ContainerView>
+    );
+  }
+}
+```
 
 ## Reference
 
