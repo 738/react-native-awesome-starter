@@ -138,3 +138,4 @@ class App extends Component {
 
 - [Facebook react-native official website](https://facebook.github.io/react-native/docs/getting-started.html)
 - [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
+- [Styled-Components-Typescript-Example](https://github.com/patrick91/Styled-Components-Typescript-Example/blob/master/src/theme/index.ts)
