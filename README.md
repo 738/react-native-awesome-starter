@@ -10,9 +10,11 @@ This repository is initial development environment settings customed by Holy Kiw
 
 3. use `styled-components` (ts)
 
-4. connect with `code-push`
+4. connect with `mobx` and `mobx-react`
 
-5. connect with `firebase`
+5. connect with `code-push`
+
+6. connect with `firebase`
 
 ## Version
 
