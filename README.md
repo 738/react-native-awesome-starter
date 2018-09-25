@@ -10,7 +10,7 @@ This repository is initial development environment settings customed by Holy Kiw
 
 3. use `styled-components` (ts)
 
-4. connect with `mobx` and `mobx-react`
+4. use `mobx` and `mobx-react`
 
 5. connect with `code-push`
 
@@ -135,6 +135,25 @@ class App extends Component {
   }
 }
 ```
+
+4. use `mobx` and `mobx-react`
+
+```bash
+npm install --save mobx mobx-react
+```
+
+add babel-preset plugin `transform-decorators-legacy` in `.babelrc` to use decorator syntax
+```json
+{
+  "presets": [
+    "react-native"
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
+}
+```
+
 
 ## Reference
 
