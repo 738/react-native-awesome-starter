@@ -154,6 +154,34 @@ add babel-preset plugin `transform-decorators-legacy` in `.babelrc` to use decor
 }
 ```
 
+5. connect with `code-push`
+
+install `code-push-cli`
+```bash
+npm install -g code-push-cli
+code-push register
+```
+
+register your app in `code-push`
+```bash
+code-push app add <AppName-Android>
+code-push app add <AppName-iOS>
+```
+
+you can check apps that you registered by this command.
+```bash
+code-push app list
+```
+
+```bash
+npm install --save react-native-code-push@latest
+react-native link react-native-code-push
+```
+
+iOS
+
+Android
+
 
 ## Reference
 
