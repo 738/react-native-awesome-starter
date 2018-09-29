@@ -178,9 +178,26 @@ npm install --save react-native-code-push@latest
 react-native link react-native-code-push
 ```
 
-iOS
+### iOS
 
-Android
+write Staging Deployment Key in `info.plist`
+```
+<key>CodePushDeploymentKey</key>
+<string><Staging Deployment Key></string>
+```
+
+### Android
+
+write Staging Deployment Key in `MainApplication.java`
+```java
+@Override
+protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+        new MainReactPackage(),
+        new CodePush("<ReactNativeComponentEx-Android의 Staging Deployment Key>", getApplicationContext(), BuildConfig.DEBUG)
+    );
+}
+```
 
 
 ## Reference
