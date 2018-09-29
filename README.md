@@ -194,7 +194,7 @@ write Staging Deployment Key in `MainApplication.java`
 protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
-        new CodePush("<ReactNativeComponentEx-Android의 Staging Deployment Key>", getApplicationContext(), BuildConfig.DEBUG)
+        new CodePush("<Staging Deployment Key>", getApplicationContext(), BuildConfig.DEBUG)
     );
 }
 ```
