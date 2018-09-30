@@ -199,9 +199,25 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
+6. connect with `firebase`
+
+### Analytics
+
+#### iOS
+
+#### Android
+
+### Admob
+
+#### iOS
+
+##### Android
+
 
 ## Reference
 
 - [Facebook react-native official website](https://facebook.github.io/react-native/docs/getting-started.html)
 - [TypeScript-React-Native-Starter](https://github.com/Microsoft/TypeScript-React-Native-Starter)
 - [Styled-Components-Typescript-Example](https://github.com/patrick91/Styled-Components-Typescript-Example/blob/master/src/theme/index.ts)
+- [CodePush 적용하기](https://github.com/kjk7034/ReactNativeStudy/blob/master/docs/CodePush.md)
+- [react-native-firebase](https://github.com/invertase/react-native-firebase)
