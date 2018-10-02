@@ -2,6 +2,8 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
+UPDATE 2018.10.02
+
 ## Contents
 
 1. `react-native init`
@@ -23,7 +25,7 @@ This repository is initial development environment settings customed by Holy Kiw
 
 ## How to set up
 
-1. init your project with `react-native-cli`
+### 1. init your project with `react-native-cli`
 
 ```bash
 $ npm install -g react-native-cli
@@ -31,7 +33,7 @@ $ react-native init MyProject
 $ cd MyProject
 ```
 
-2. use `typescript`
+### 2. use `typescript`
 
 ```bash
 $ yarn add --dev typescript
@@ -41,7 +43,7 @@ $ touch rn-cli.config.js
 $ yarn add --dev @types/react @types/react-native
 ```
 
-write this code in `rn-cli.config.js`
+#### write this code in `rn-cli.config.js`
 
 ```javascript
 module.exports = {
@@ -54,14 +56,14 @@ module.exports = {
 };
 ```
 
-in order to migrate to typescript, rename `App.js` to `App.tsx`
+#### in order to migrate to typescript, rename `App.js` to `App.tsx`
 
-add typescript test infra
+#### add typescript test infra
 ```bash
 yarn add --dev ts-jest
 ```
 
-write this in `package.json`
+#### write this in `package.json`
 ```json
 "jest": {
   "preset": "react-native",
@@ -83,13 +85,13 @@ write this in `package.json`
 }
 ```
 
-3. use `styled-components` (ts)
+### 3. use `styled-components` (ts)
 
 ```bash
 yarn add --dev styled-components
 ```
 
-make `index.ts` file in theme directory
+#### make `index.ts` file in theme directory
 ```typescript
 import * as styledComponents from "styled-components";
 
@@ -115,7 +117,7 @@ export default styled;
 export { css, injectGlobal, keyframes, ThemeProvider };
 ```
 
-migrate `css` to `styled-components`
+#### migrate `css` to `styled-components`
 ```tsx
 // in App.tsx
 const ContainerView = styled(View)`
@@ -136,13 +138,13 @@ class App extends Component {
 }
 ```
 
-4. use `mobx` and `mobx-react`
+### 4. use `mobx` and `mobx-react`
 
 ```bash
 npm install --save mobx mobx-react
 ```
 
-add babel-preset plugin `transform-decorators-legacy` in `.babelrc` to use decorator syntax
+#### add babel-preset plugin `transform-decorators-legacy` in `.babelrc` to use decorator syntax
 ```json
 {
   "presets": [
@@ -154,21 +156,21 @@ add babel-preset plugin `transform-decorators-legacy` in `.babelrc` to use decor
 }
 ```
 
-5. connect with `code-push`
+### 5. connect with `code-push`
 
-install `code-push-cli`
+#### install `code-push-cli`
 ```bash
 npm install -g code-push-cli
 code-push register
 ```
 
-register your app in `code-push`
+#### register your app in `code-push`
 ```bash
 code-push app add <AppName-Android>
 code-push app add <AppName-iOS>
 ```
 
-you can check apps that you registered by this command.
+#### you can check apps that you registered by this command.
 ```bash
 code-push app list
 ```
@@ -180,7 +182,7 @@ react-native link react-native-code-push
 
 ### iOS
 
-write Staging Deployment Key in `info.plist`
+#### write Staging Deployment Key in `info.plist`
 ```
 <key>CodePushDeploymentKey</key>
 <string><Staging Deployment Key></string>
@@ -188,7 +190,7 @@ write Staging Deployment Key in `info.plist`
 
 ### Android
 
-write Staging Deployment Key in `MainApplication.java`
+#### write Staging Deployment Key in `MainApplication.java`
 ```java
 @Override
 protected List<ReactPackage> getPackages() {
@@ -199,7 +201,12 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
-6. connect with `firebase`
+### 6. connect with `firebase`
+
+```bash
+npm install --save react-native-firebase
+react-native link react-native-firebase
+```
 
 ### Analytics
 
