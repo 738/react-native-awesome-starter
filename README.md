@@ -207,10 +207,38 @@ protected List<ReactPackage> getPackages() {
 npm install --save react-native-firebase
 react-native link react-native-firebase
 ```
+create your project in Firebase
 
 ### Analytics
 
 #### iOS
+
+##### Setup `GoogleService-Info.plist`
+
+install `GoogleService-Info.plist` and move to `ios/[YOUR APP NAME]` directory
+
+##### Initialise Firebase
+
+in AppDelegate.m
+
+```
+#import <Firebase.h>
+
+[FIRApp configure];
+```
+
+##### Install Firebase Library
+
+in PodFile
+```
+# Required by RNFirebase
+pod 'Firebase/Core', '~> 5.9.0'
+```
+
+```
+pod install
+```
+
 
 #### Android
 
