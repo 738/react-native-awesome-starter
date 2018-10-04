@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2018.10.04
+UPDATE 2018.10.05
 
 ## Contents
 
@@ -217,7 +217,7 @@ create your project in Firebase
 
 install `GoogleService-Info.plist` and move to `ios/[YOUR APP NAME]` directory
 
-##### Initialise Firebase
+##### Initialize Firebase
 
 in AppDelegate.m
 
@@ -239,8 +239,50 @@ pod 'Firebase/Core', '~> 5.9.0'
 pod install
 ```
 
-
 #### Android
+
+##### Setup `google-services.json`
+
+install `google-services.json` and move to `android/app` directory
+
+write this code in `app.gradle` (*project* level)
+```gradle
+buildscript {
+  // ...
+  dependencies {
+    // ...
+    classpath 'com.google.gms:google-services:4.0.1'
+  }
+}
+```
+
+write this code very bottom in `app.gradle` (*app* level)
+```gradle
+apply plugin: 'com.google.gms.google-services'
+```
+
+##### Initialize Firebase
+
+```gradle
+dependencies {
+  // This should be here already
+  implementation project(':react-native-firebase')
+
+  // Firebase dependencies
+  implementation "com.google.android.gms:play-services-base:15.0.1"
+  implementation "com.google.firebase:firebase-core:16.0.3"
+
+  ...
+```
+
+#### Analytics `logEvent`
+
+##### You can track event with `logEvent` function
+
+```javascript
+firebase.analytics().logEvent(eventName, params);
+// eventName: string, params: object
+```
 
 ### Admob
 
