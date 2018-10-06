@@ -328,6 +328,22 @@ firebase.analytics().logEvent(eventName, params);
 ##### Android
 
 
+
+## Trouble Shooting
+
+### Problem
+When you build react-native application in Xcode
+```
+Xcode 10: Build input file double-conversion cannot be found
+```
+### Solution
+```bash
+$ cd node_modules/react-native/scripts && ./ios-install-third-party.sh && cd ../../../
+$ cd node_modules/react-native/third-party/glog-0.3.5/ && ../../scripts/ios-configure-glog.sh && cd ../../../../
+```
+reference: https://github.com/facebook/react-native/issues/21168
+
+
 ## Reference
 
 - [Facebook react-native official website](https://facebook.github.io/react-native/docs/getting-started.html)
