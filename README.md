@@ -160,6 +160,17 @@ npm install --save mobx mobx-react
 }
 ```
 
+#### let `experimentalDecorators` be true in `tsconfig.json`
+```
+{
+  "compilerOptions": {
+    ...
+    "experimentalDecorators": true
+    ...
+  }
+}
+```
+
 ### 5. connect with `code-push`
 
 #### install `code-push-cli`
