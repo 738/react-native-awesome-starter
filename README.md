@@ -18,6 +18,10 @@ UPDATE 2018.10.05
 
 6. connect with `firebase`
 
+(TODO)
+0. add assets/font
+0. use `react-native-splash-screen`
+
 ## Version
 
 - `react`: 16.5.0
