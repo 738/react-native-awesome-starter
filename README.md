@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2018.10.05
+UPDATE 2018.10.06
 
 ## Contents
 
@@ -342,6 +342,24 @@ $ cd node_modules/react-native/scripts && ./ios-install-third-party.sh && cd ../
 $ cd node_modules/react-native/third-party/glog-0.3.5/ && ../../scripts/ios-configure-glog.sh && cd ../../../../
 ```
 reference: https://github.com/facebook/react-native/issues/21168
+
+### Problem
+error (when `pod install`)
+```
+In Podfile:
+    React/CxxBridge (from `../node_modules/react-native`) was resolved to 0.57.2, which depends on
+      Folly (= 2016.10.31.00)
+```
+
+### Solution
+write this code in `Podfile`
+```
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+```
+reference: https://facebook.github.io/react-native/docs/integration-with-existing-apps.html
 
 
 ## Reference
