@@ -160,6 +160,28 @@ npm install --save mobx mobx-react
 }
 ```
 
+#### Trouble Shooting
+if you have error like this
+```
+error: bundling failed: Error: The 'decorators' plugin requires a 'decoratorsBeforeExport' option, whose value must be a boolean. If you are migrating from Babylon/Babel 6 or want to use the old decorators proposal, you should use the 'decorators-legacy' plugin instead of 'decorators'.
+```
+
+```
+npm install --save-dev @babel/plugin-proposal-decorators
+```
+
+```
+{
+  ...
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+  ]
+}
+```
+
+
+
+
 #### let `experimentalDecorators` be true in `tsconfig.json`
 ```
 {
