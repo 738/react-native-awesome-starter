@@ -103,7 +103,6 @@ const {
   default: styled,
   css,
   injectGlobal,
-  keyframes,
   ThemeProvider
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<
   IThemeInterface
@@ -118,8 +117,10 @@ export const theme = {
 };
 
 export default styled;
-export { css, injectGlobal, keyframes, ThemeProvider };
+export { css, injectGlobal, ThemeProvider };
 ```
+
+> In `react-native`, you cannot use keyframes. You should use [`Animated`](https://facebook.github.io/react-native/docs/animated) API supported by `react-native`.
 
 #### migrate `css` to `styled-components`
 ```tsx
