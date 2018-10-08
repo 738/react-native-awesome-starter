@@ -370,3 +370,4 @@ reference: https://facebook.github.io/react-native/docs/integration-with-existin
 - [Styled-Components-Typescript-Example](https://github.com/patrick91/Styled-Components-Typescript-Example/blob/master/src/theme/index.ts)
 - [CodePush 적용하기](https://github.com/kjk7034/ReactNativeStudy/blob/master/docs/CodePush.md)
 - [react-native-firebase](https://github.com/invertase/react-native-firebase)
+- [integration with existing apps](https://facebook.github.io/react-native/docs/integration-with-existing-apps#docsNav)
