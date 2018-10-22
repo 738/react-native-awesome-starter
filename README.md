@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2018.10.06
+UPDATE 2018.10.22
 
 ## Contents
 
@@ -328,8 +328,6 @@ firebase.analytics().logEvent(eventName, params);
 
 ##### Android
 
-
-
 ## Trouble Shooting
 
 ### Problem
@@ -361,7 +359,6 @@ write this code in `Podfile`
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
 ```
 reference: https://facebook.github.io/react-native/docs/integration-with-existing-apps.html
-
 
 ## Reference
 
