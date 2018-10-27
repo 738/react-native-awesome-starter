@@ -20,6 +20,7 @@ UPDATE 2018.10.27
 - add assets/font
 - use `react-native-splash-screen`
 - use `react-native-fast-image`
+- use `react-navigation`
 
 ## Version
 
