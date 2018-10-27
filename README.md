@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2018.10.22
+UPDATE 2018.10.27
 
 ## Contents
 
@@ -10,22 +10,21 @@ UPDATE 2018.10.22
 
 2. use `typescript`
 
-3. use `styled-components` (ts)
+3. use `mobx` and `mobx-react`
 
-4. use `mobx` and `mobx-react`
+4. connect with `code-push`
 
-5. connect with `code-push`
-
-6. connect with `firebase`
+5. connect with `firebase`
 
 (TODO)
 - add assets/font
 - use `react-native-splash-screen`
+- use `react-native-fast-image`
 
 ## Version
 
 - `react`: 16.5.0
-- `react-native`: 0.57
+- `react-native`: 0.57.4
 
 ## How to set up
 
@@ -89,61 +88,7 @@ yarn add --dev ts-jest
 }
 ```
 
-### 3. use `styled-components` (ts)
-
-```bash
-yarn add --dev styled-components
-```
-
-#### make `index.ts` file in theme directory
-```typescript
-import * as styledComponents from "styled-components";
-
-const {
-  default: styled,
-  css,
-  injectGlobal,
-  ThemeProvider
-} = styledComponents as styledComponents.ThemedStyledComponentsModule<
-  IThemeInterface
->;
-
-export interface IThemeInterface {
-  primaryColor: string;
-}
-
-export const theme = {
-  primaryColor: "#e9e9eb"
-};
-
-export default styled;
-export { css, injectGlobal, ThemeProvider };
-```
-
-> In `react-native`, you cannot use keyframes. You should use [`Animated`](https://facebook.github.io/react-native/docs/animated) API supported by `react-native`.
-
-#### migrate `css` to `styled-components`
-```tsx
-// in App.tsx
-const ContainerView = styled(View)`
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: #F5FCFF;
-`;
-
-class App extends Component {
-  render() {
-    return (
-      <ContainerView>
-        // ...
-      </ContainerView>
-    );
-  }
-}
-```
-
-### 4. use `mobx` and `mobx-react`
+### 3. use `mobx` and `mobx-react`
 
 ```bash
 npm install --save mobx mobx-react
@@ -153,7 +98,7 @@ npm install --save mobx mobx-react
 ```json
 {
   "presets": [
-    "react-native"
+    "module:metro-react-native-babel-preset"
   ],
   "plugins": [
     "transform-decorators-legacy"
@@ -194,7 +139,7 @@ npm install --save-dev @babel/plugin-proposal-decorators
 }
 ```
 
-### 5. connect with `code-push`
+### 4. connect with `code-push`
 
 #### install `code-push-cli`
 ```bash
@@ -239,7 +184,7 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
-### 6. connect with `firebase`
+### 5. connect with `firebase`
 
 ```bash
 npm install --save react-native-firebase
@@ -359,6 +304,65 @@ write this code in `Podfile`
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
 ```
 reference: https://facebook.github.io/react-native/docs/integration-with-existing-apps.html
+
+## Deprecated
+
+### `styled-components`
+
+
+### 3. use `styled-components` (ts)
+
+```bash
+yarn add --dev styled-components
+```
+
+#### make `index.ts` file in theme directory
+```typescript
+import * as styledComponents from "styled-components";
+
+const {
+  default: styled,
+  css,
+  injectGlobal,
+  ThemeProvider
+} = styledComponents as styledComponents.ThemedStyledComponentsModule<
+  IThemeInterface
+>;
+
+export interface IThemeInterface {
+  primaryColor: string;
+}
+
+export const theme = {
+  primaryColor: "#e9e9eb"
+};
+
+export default styled;
+export { css, injectGlobal, ThemeProvider };
+```
+
+> In `react-native`, you cannot use keyframes. You should use [`Animated`](https://facebook.github.io/react-native/docs/animated) API supported by `react-native`.
+
+#### migrate `css` to `styled-components`
+```tsx
+// in App.tsx
+const ContainerView = styled(View)`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5FCFF;
+`;
+
+class App extends Component {
+  render() {
+    return (
+      <ContainerView>
+        // ...
+      </ContainerView>
+    );
+  }
+}
+```
 
 ## Reference
 
