@@ -373,3 +373,4 @@ class App extends Component {
 - [CodePush 적용하기](https://github.com/kjk7034/ReactNativeStudy/blob/master/docs/CodePush.md)
 - [react-native-firebase](https://github.com/invertase/react-native-firebase)
 - [integration with existing apps](https://facebook.github.io/react-native/docs/integration-with-existing-apps#docsNav)
+- [Snow 개발자 이성민님의 react-native 발표내용 정리](https://github.com/JonJee/deview-2018-review/blob/master/React%20Native:%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80%20%ED%95%9C%20%EB%8B%AC%20%EB%A7%8C%EC%97%90%20%EC%95%B1%20%EC%B6%9C%EC%8B%9C%ED%95%98%EA%B8%B0.md)
