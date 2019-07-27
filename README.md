@@ -103,7 +103,10 @@ npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslin
 module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
-    extends: ['plugin:@typescript-eslint/recommended']
+    extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+    ],
 };
 ```
 
