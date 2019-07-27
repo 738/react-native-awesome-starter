@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2018.10.27
+UPDATE 2019.07.27
 
 ## Contents
 
@@ -10,11 +10,13 @@ UPDATE 2018.10.27
 
 2. use `typescript`
 
-3. use `mobx` and `mobx-react`
+3. use `eslint`
 
-4. connect with `code-push`
+4. use `mobx` and `mobx-react`
 
-5. connect with `firebase`
+5. connect with `code-push`
+
+6. connect with `firebase`
 
 (TODO)
 - add assets/font
@@ -89,7 +91,36 @@ yarn add --dev ts-jest
 }
 ```
 
-### 3. use `mobx` and `mobx-react`
+### 3. use `eslint`
+
+```bash
+npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+#### add `.eslintrc.js` in root directory
+
+```js
+module.exports = {
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
+    extends: ['plugin:@typescript-eslint/recommended']
+};
+```
+
+#### add `settings.json` in .vscode
+
+```json
+{
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ]
+}
+```
+
+### 4. use `mobx` and `mobx-react`
 
 ```bash
 npm install --save mobx mobx-react
@@ -140,7 +171,7 @@ npm install --save-dev @babel/plugin-proposal-decorators
 }
 ```
 
-### 4. connect with `code-push`
+### 5. connect with `code-push`
 
 #### install `code-push-cli`
 ```bash
@@ -185,7 +216,7 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
-### 5. connect with `firebase`
+### 6. connect with `firebase`
 
 ```bash
 npm install --save react-native-firebase
