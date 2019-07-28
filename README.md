@@ -2,7 +2,7 @@
 
 This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
 
-UPDATE 2019.07.27
+UPDATE 2019.07.28
 
 ## Contents
 
@@ -120,6 +120,21 @@ module.exports = {
         "typescript",
         "typescriptreact"
       ]
+}
+```
+
+#### edit `compilerOptions` in `tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    …
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  …
 }
 ```
 
