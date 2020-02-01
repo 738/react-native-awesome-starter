@@ -1,6 +1,8 @@
 # react-native-awesome-starter
 
-This repository is initial development environment settings customed by Holy Kiwi Team (2018.09.19)
+This repository is initial development environment settings
+
+SINCE 2018.09.19
 
 UPDATE 2019.07.28
 
