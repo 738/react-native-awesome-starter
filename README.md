@@ -1,10 +1,11 @@
 # react-native-awesome-starter
 
-This repository is initial development environment settings
+> This repository is about initial Development Environment Settings.
 
-SINCE 2018.09.19
+## Version
 
-UPDATE 2019.07.28
+- `react`: 16.5.0
+- `react-native`: 0.57.4
 
 ## Contents
 
@@ -25,11 +26,6 @@ UPDATE 2019.07.28
 - use `react-native-splash-screen`
 - use `react-native-fast-image`
 - use `react-navigation` or `react-native-navigation`
-
-## Version
-
-- `react`: 16.5.0
-- `react-native`: 0.57.4
 
 ## How to set up
 
